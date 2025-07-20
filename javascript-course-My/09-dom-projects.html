@@ -5,21 +5,53 @@
   </head>
   <body>
     <p>YouTube Subscribe Button</p>
-    <button
-      onClick="
-        const buttonElement = document.querySelector('.js-subcribe-button');
-            
-        if (buttonElement.innerHTML === 'Subscribe'){
-            buttonElement.innerHTML = 'Subscribed';
-        } else {
-            buttonElement.innerHTML = 'Subscribe';
-
-        }
-    "
-      class="js-subcribe-button"
-    >
+    <button onClick="subscribe()" ; class="js-subcribe-button">
       Subscribe
     </button>
-    <script></script>
+
+    <p>Amazon Shipping Calculator</p>
+    <input
+      placeholder="Cost of order"
+      class="js-cost-input"
+      onkeydown="
+handleCostKeyDown(event);    "
+    />
+    <button
+      onClick="
+calculateTotal();
+"
+    >
+      Calculate
+    </button>
+    <p class="js-total-cost"></p>
+    
+    <script>
+      function handleCostKeyDown(event) {
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-cost-input");
+        let cost = Number(inputElement.value); //input box has no html elements, so no need .innerhTML property, .value instead.
+
+        if (cost < 40) {
+          cost = cost + 10; //10$ for shipping
+        }
+
+        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+      }
+
+      function subscribe() {
+        const buttonElement = document.querySelector(".js-subcribe-button");
+
+        if (buttonElement.innerHTML === "Subscribe") {
+          buttonElement.innerHTML = "Subscribed";
+        } else {
+          buttonElement.innerHTML = "Subscribe";
+        }
+      }
+    </script>
   </body>
 </html>
