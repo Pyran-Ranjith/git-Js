@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <noscript>
+      <script>
+        const myArray = [10, 20, 30]; //array
+        console.log(myArray);
+        console.log(myArray[0]); //1st element
+        console.log(myArray[1]); //2nd element
+        myArray[0] = 99; //change 1st value
+        console.log(myArray);
+
+        [1, "hello", true, { name: "socks" }, [1, 2]]; //everything is possible
+
+        console.log(typeof [1, 2]); //--> object
+        console.log(Array.isArray([1, 2])); //--> true
+        console.log(myArray.length); // number of elements
+
+        /* methods */
+        myArray.push(100); //
+        console.log(myArray); //--> [99, 20, 30, 100] 100 will be added as last element
+
+        myArray.splice(0, 1); //--> 0=index, 1=number of elment to remove
+        console.log(myArray); //--> [20, 30, 100] (99 removed)
+      </script>
+    </noscript>
+
+    <script>
+      /* Loops */
+
+      let i = 1;
+      while (i < 5) {
+        console.log(i);
+        i = i + 1;
+      }
+    </script>
+  </body>
+</html>
