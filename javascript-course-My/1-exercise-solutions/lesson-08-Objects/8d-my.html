@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>08 Objects</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      function priceCompair(product1, product2) {
+        if(product1.price > product2.price) {
+          console.log(`Product1 is expesive`);
+        } else if(product2.price > product1.price) {
+          console.log(`Product2 is expesive`);
+        }
+      }
+      const product1 = {
+        name: "Bascat ball",
+        price: 2090,
+      };
+
+      const product2 = {
+        name: "Socks",
+        price: 3090,
+      };
+
+      priceCompair(product1, product2);
+    </script>
+  </body>
+</html>

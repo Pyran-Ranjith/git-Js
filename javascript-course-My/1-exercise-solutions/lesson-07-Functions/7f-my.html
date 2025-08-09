@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>07 Functions</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      function convertTeperatur(degrees, unit) {
+        if (unit === "F") {
+          console.log(`${((degrees - 32) * 5) / 9}C`);
+        } else if (unit === "C") {
+          console.log(`${(degrees * 9/5) + 32}F`);
+        }
+      }
+
+      convertTeperatur(77, "F");
+      convertTeperatur(25, "C");
+    </script>
+  </body>
+</html>
