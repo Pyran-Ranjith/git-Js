@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function removeEgg(array1) {
+      console.log(array1);
+        let array = array1.slice();
+        array = array.reverse();
+        let retArr = [];
+        let eggCount = 0;
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === "egg") {
+            eggCount++;
+            if (eggCount <= 2) {
+              continue;
+            }
+          }
+          retArr.push(array[i]);
+        }
+        return retArr.reverse();
+      }
+      const array = removeEgg(["egg", "apple", "egg", "egg", "ham"]);
+      console.log(array);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lesson-11-5i</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      function minMax (nums) {
+      let ret={min:nums[0], max:nums[0]};
+
+      for (let i = 0; i < nums.length; i++) {
+        if(nums[i]>ret.max) {
+          ret.max=nums[i];
+        }
+        if(nums[i]<ret.min) {
+          ret.min=nums[i];
+        }
+      }
+      return ret;
+      }
+      const result=minMax([-2,3,-5,7,10]);
+      console.log(`min: ${result.min} max: ${result.max}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const array = ["hello", "world", "search", "good", "search"];
+      let retValue = -1;
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === "search") {
+          retValue = i;
+          break;
+        }
+      }
+      console.log(retValue);
+    </script>
+  </body>
+</html>

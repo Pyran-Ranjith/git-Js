@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function removeEgg(array) {
+        let retArr = [];
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === 'egg') {
+            continue;
+          }
+             retArr.push(array[i]);
+       }
+        return retArr;
+      }
+        const array = removeEgg(["egg", "apple", "egg", "egg", 'ham']);
+       console.log(array);
+   </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lesson-11-5i</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      function addNum (array, num) {
+      const array1 = [];
+      for (let i = 0; i < array.length; i++) {
+        array1.push(num + array[i]);
+      }
+      return array1;
+      }
+      console.log(addNum([1, 2, 3], 3));
+      console.log(addNum([-2, -1, 0, 99], 2));
+    </script>
+  </body>
+</html>
