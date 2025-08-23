@@ -31,10 +31,7 @@ const products = [
 ];
 
 let productsHTML = '';
-let i = 0;
 products.forEach((product) => {
-    i ++;
-    if (i <= 3) {
   productsHTML += `
   
           <div class="product-image-container">
@@ -84,11 +81,7 @@ products.forEach((product) => {
             Add to Cart
           </button>
               `;
-// console.log(productsHTML);
-            
-// document.querySelector('.js-products-grid').innerHTML = productsHTML;
 document.querySelector('.rec1').innerHTML = productsHTML;
-}
 }
 );
 
