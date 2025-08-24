@@ -5,7 +5,7 @@
 
 - to add all files at once
 git add . 
-git commit -m "0908At2048 updated" 
+git commit -m "Make add to cart button interactive" 
 git push 
 
 ### Basic Configuration:
